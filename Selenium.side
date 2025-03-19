@@ -1,0 +1,356 @@
+{
+  "id": "27e47f51-9b14-4c2a-87ac-79b50cc1b8b0",
+  "version": "2.0",
+  "name": "TP",
+  "url": "http://localhost:8000/index_exo3.html",
+  "tests": [{
+    "id": "723c984a-c634-4cd1-8522-e2a08d58662a",
+    "name": "affichage test",
+    "commands": [{
+      "id": "2fa91d1c-2b7a-4599-a36e-d24ef80fe8fe",
+      "comment": "",
+      "command": "open",
+      "target": "https://crm.akov-formation.fr/datas/upload/jz/qg/fv/hfZrwBlu7J.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d50cce5f-f94e-4980-8bf3-474df318807e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98103ddd-ae81-4121-b580-0fe8e1e42acd",
+      "comment": "",
+      "command": "click",
+      "target": "id=taskInput",
+      "targets": [
+        ["id=taskInput", "id"],
+        ["css=#taskInput", "css:finder"],
+        ["xpath=//input[@id='taskInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6fafd80-57ad-49c0-835c-90bf82092b40",
+      "comment": "",
+      "command": "type",
+      "target": "id=taskInput",
+      "targets": [
+        ["id=taskInput", "id"],
+        ["css=#taskInput", "css:finder"],
+        ["xpath=//input[@id='taskInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tache 1"
+    }, {
+      "id": "493803d4-e272-46a7-bcde-885e1248213a",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick='addTask()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "816eb8b5-bc3c-4b4b-b67b-56c4fbd9ab4d",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='taskList']/div/span",
+      "targets": [
+        ["css=span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='taskList']/div/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Tache 1')]", "xpath:innerText"]
+      ],
+      "value": "Tache 1"
+    }, {
+      "id": "7a05c3bd-b074-4800-8614-5060dd3d4ce0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.location.reload();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ffa97b60-1e60-41ce-a4b5-4556f8c9b272",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='taskList']/div/span",
+      "targets": [],
+      "value": "Tache 1"
+    }]
+  }, {
+    "id": "1d64cf22-7457-4d51-a02e-457ae7f8b11b",
+    "name": "suppresion",
+    "commands": [{
+      "id": "eb3f9f13-9c1f-44e8-b886-4771e5490f7a",
+      "comment": "",
+      "command": "open",
+      "target": "https://crm.akov-formation.fr/datas/upload/fj/cv/r8/vsdkBRCemP.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c016f6a-1c32-4507-a87f-8e7df57ff074",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "840x442",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c5e0e4d-8c07-4a95-8d85-89ea207abc1e",
+      "comment": "",
+      "command": "click",
+      "target": "id=taskInput",
+      "targets": [
+        ["id=taskInput", "id"],
+        ["css=#taskInput", "css:finder"],
+        ["xpath=//input[@id='taskInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f60924e-37ca-4339-9f29-ab8e9b7545f9",
+      "comment": "",
+      "command": "type",
+      "target": "id=taskInput",
+      "targets": [
+        ["id=taskInput", "id"],
+        ["css=#taskInput", "css:finder"],
+        ["xpath=//input[@id='taskInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "tache 2"
+    }, {
+      "id": "3367d8eb-3e2c-4ef9-9359-440a23727bb2",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick='addTask()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "301fbbc4-edf1-4723-a55f-f07ef4a4622a",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick='removeTask(this)']", "xpath:attributes"],
+        ["xpath=//div[@id='taskList']/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Supprimer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "387aad13-f11b-4267-8530-88767b11f347",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[@id='taskList']/div/span",
+      "targets": [],
+      "value": "tache 2"
+    }]
+  }, {
+    "id": "33830613-934a-4b3b-95d6-89f18ff394a9",
+    "name": "affichagetestAjout",
+    "commands": [{
+      "id": "e92425b0-5400-4084-8119-df54eb4f653d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/index_exo3.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bf2ea87-5b1c-43ac-ba0e-f9210b78088f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "840x442",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5834006-0eb4-49a7-87f7-47012ef6c2ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=taskInput",
+      "targets": [
+        ["id=taskInput", "id"],
+        ["css=#taskInput", "css:finder"],
+        ["xpath=//input[@id='taskInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f12dccf7-141e-46bf-a969-ddca129cbe28",
+      "comment": "",
+      "command": "type",
+      "target": "id=taskInput",
+      "targets": [
+        ["id=taskInput", "id"],
+        ["css=#taskInput", "css:finder"],
+        ["xpath=//input[@id='taskInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "tache"
+    }, {
+      "id": "5bf524e7-4551-4f0f-a900-b4a4c9b6c9c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick='addTask()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdf4968a-8268-49c7-b95c-30eca9ec26dd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.location.reload();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32fce20b-e988-4582-9ece-c1474ff7cb49",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@id='taskList']/div/span",
+      "targets": [
+        ["css=span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='taskList']/div/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'tache')]", "xpath:innerText"]
+      ],
+      "value": "tache"
+    }]
+  }, {
+    "id": "1efac701-8413-436f-b396-31564ea6aaa9",
+    "name": "suppressionAjout",
+    "commands": [{
+      "id": "2f59694f-6722-45d6-b7d5-73ad38a6a4de",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/index_exo3.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9039ba4f-3294-4b07-948a-dff261c1a1be",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "840x442",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "faa73527-eb48-4149-80c4-1cc33fc37f51",
+      "comment": "",
+      "command": "click",
+      "target": "id=taskInput",
+      "targets": [
+        ["id=taskInput", "id"],
+        ["css=#taskInput", "css:finder"],
+        ["xpath=//input[@id='taskInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "210e56a1-a7ac-45dc-9ebc-c61ef0bee1b1",
+      "comment": "",
+      "command": "type",
+      "target": "id=taskInput",
+      "targets": [
+        ["id=taskInput", "id"],
+        ["css=#taskInput", "css:finder"],
+        ["xpath=//input[@id='taskInput']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "tache"
+    }, {
+      "id": "3d940658-654b-460c-8784-57a3340ce7d0",
+      "comment": "",
+      "command": "click",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick='addTask()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b113327c-9907-4e85-b2ee-529e534fbd8e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=button",
+      "targets": [
+        ["css=button", "css:finder"],
+        ["xpath=//button[@onclick='addTask()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54ea71ef-5aa8-4e2a-8201-5f70afa0cf57",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=button:nth-child(3)",
+      "targets": [
+        ["css=button:nth-child(3)", "css:finder"],
+        ["xpath=//button[@onclick='addTask()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01da8e1d-b625-4f06-853a-defbfa574047",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//button[@onclick='removeTask(this)']", "xpath:attributes"],
+        ["xpath=//div[@id='taskList']/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Supprimer')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b3c4ffe-9bee-43f7-874b-c6d52666eae5",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[@id='taskList']/div/span",
+      "targets": [],
+      "value": "tache"
+    }, {
+      "id": "accb7706-c22a-4b7c-a9dc-73b05749d193",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.location.reload();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80dd115a-6ff4-4729-b036-ed61ef6908d1",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[@id='taskList']/div/span",
+      "targets": [],
+      "value": "tache"
+    }]
+  }],
+  "suites": [{
+    "id": "9715270d-99b1-4c8c-af36-5d002220b794",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["723c984a-c634-4cd1-8522-e2a08d58662a", "1d64cf22-7457-4d51-a02e-457ae7f8b11b"]
+  }],
+  "urls": ["https://crm.akov-formation.fr/datas/upload/jz/qg/fv/hfZrwBlu7J.html", "https://crm.akov-formation.fr/datas/upload/fj/cv/r8/vsdkBRCemP.html", "http://localhost:8000/index_exo3.html"],
+  "plugins": []
+}
